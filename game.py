@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from cat import Cat
 #create Window
 root = Tk()
 
@@ -32,10 +33,10 @@ def createBoard():
 
 
 def deleteTile(button_press):
-    print(button_press)
     validSpaces.remove(button_press)
-    print(validSpaces)
+    theCat.calculateNextMove(validSpaces)
 
+theCat = Cat()
 
 createBoard()
 
